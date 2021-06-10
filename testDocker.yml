@@ -1,7 +1,7 @@
 ---
 - name: Praticing
   hosts: all #localhost #works with localhost
-  connection: local
+  #connection: docker
   tasks:
 
 #  - name: Create folder
@@ -30,6 +30,6 @@
     debug: 
       msg: "{{ansible_os_family}}"
 
-  - name: Docker Inventory
+  - name: Inventory hostname
     debug:
-      msg="Container name is {{inventory_hostname}}"
+      msg="Name in inventory is {{inventory_hostname}}"
