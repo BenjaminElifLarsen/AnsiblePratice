@@ -1,7 +1,6 @@
 ---
 - name: Praticing
   hosts: all #localhost #works with localhost
-  connection: local #this is needed to call services hosted on the local host. This will give a 'correct' response no matter what. Might need to set up SSH to contact the docker containers.
   tasks:
 
 #  - name: Create folder

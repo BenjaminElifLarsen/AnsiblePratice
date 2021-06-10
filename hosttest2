@@ -1,0 +1,5 @@
+[services]
+mssql ansible_connection=docker
+apache ansible_connection=docker
+
+

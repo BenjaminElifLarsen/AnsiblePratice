@@ -1,0 +1,11 @@
+FROM mcr.microsoft.com/mssql/server
+
+USER root
+
+RUN apt-get update && \
+    apt-get clean
+
+RUN apt-get install -y git nano sudo
+RUN apt-get install -y python
+
+RUN apt-get update
