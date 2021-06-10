@@ -1,0 +1,14 @@
+---
+- name: Praticing
+  hosts: all
+  tasks:
+
+#  - name: Create folder
+#    win_file:
+#      path: C:\CreatedFolder
+#      state: directory
+
+
+  - name: Write out message
+    debug:
+      msg: "This is a test"
