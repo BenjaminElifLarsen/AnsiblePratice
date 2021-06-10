@@ -1,6 +1,7 @@
 ---
 - name: Praticing
-  hosts: all
+  hosts: all #localhost #works with localhost
+  connection: local #this is needed to call services hosted on the local host. 
   tasks:
 
 #  - name: Create folder
@@ -12,3 +13,11 @@
   - name: Write out message
     debug:
       msg: "This is a test"
+
+  - name: Get OS information
+    debug: 
+      msg: "OS is {{hostvars[inventory_hostname].ansible_distribution}}"
+    debug:
+      msg: "Major version is {{hostvars[inventory_hostname].ansible_distribution_major_version}}" 
+    debug:
+      msg: "Version is {{hostvars[inventory_hostname].ansible_distribution_version}}"

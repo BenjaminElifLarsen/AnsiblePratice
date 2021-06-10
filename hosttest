@@ -1,2 +1,5 @@
-127.0.0.1
+[services]
+chat ansible_host=127.0.0.1 ansible_port=8080
+https ansible_host=127.0.0.1 ansible_port=443
+mySQL ansible_host=127.0.0.1 ansible_port=3306
 
