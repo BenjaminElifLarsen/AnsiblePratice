@@ -10,3 +10,6 @@ For the apache the playbook states it is a Ubuntu 20.4
 
 Got it to work, had to allow Docker to intergrate with the wsl ubuntu distro. Also updated the hostDocker file to help fix some problems.
 The name of the host needs to be same as the docker container. 
+
+
+Debian does not support LSB, however, instead of failing it just return an empty array. 
