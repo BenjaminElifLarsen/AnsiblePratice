@@ -1,18 +1,7 @@
 ---
 - name: Praticing
-  hosts: all #localhost #works with localhost
-  #connection: docker
+  hosts: all
   tasks:
-
-#  - name: Create folder
-#    win_file:
-#      path: C:\CreatedFolder
-#      state: directory
-
-
-#  - name: Write out message
-#    debug:
-#      msg: "This is a test"
 
   - name: OS ->
     debug: 
@@ -39,4 +28,23 @@
       msg: "Hello from an Apache server"
     when: ansible_distribution == 'Debian'
     
+  - name: Python Version
+    debug:
+      msg: "Python is {{ansible_python_version}}"
 
+  - name: DNS
+    debug:
+      msg: "DNS is {{ansible_dns}}"
+
+  - name: IPv4
+    debug: 
+      msg: "IPv4 is {{ansible_all_ipv4_addresses}}"
+    ignore_errors: yes
+
+- name: Praticing2
+  hosts: all
+  tasks:
+
+  - name: LSB
+    debug:
+      msg: "{{ansible_lsb}}"

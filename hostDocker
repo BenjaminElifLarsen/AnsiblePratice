@@ -6,4 +6,9 @@ all:
   vars:
     ansible_connection: docker
 
+local:
+  hosts:
+    localhost:
+  vars:
+    ansible_connection: local
 
