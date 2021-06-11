@@ -33,3 +33,10 @@
   - name: Inventory hostname
     debug:
       msg="Name in inventory is {{inventory_hostname}}"
+
+  - name: Apache Only
+    debug:
+      msg: "Hello from an Apache server"
+    when: ansible_distribution == 'Debian'
+    
+
