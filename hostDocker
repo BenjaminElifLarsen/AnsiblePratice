@@ -1,0 +1,9 @@
+all:
+  hosts:
+    mssql:
+    apache:
+      docker_host: "tcp://0.0.0.0:8081"  
+  vars:
+    ansible_connection: docker
+
+

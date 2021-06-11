@@ -1,8 +1,0 @@
-a[services]
-mssql ansible_connection=docker ansible_host=mssql
-apache ansible_connection=docker 
-#mssql2 ansible_host=0.0.0.0 ansible_port=1435
-#apache2 ansible_host=0.0.0.0 ansible_port=8081
-#DOCKER_HOST=tcp://localhost:8081 ./docker.py --pretty
-#local ansible_host=127.0.0.1
-
