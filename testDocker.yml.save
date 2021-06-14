@@ -1,0 +1,39 @@
+---
+- name: PratDebianicing
+  hosts: all #localhost #works with localhost
+  #connection: docker
+  tasks:
+
+#  - name: Create folder
+#    win_file:
+#      path: C:\CreatedFolder
+#      state: directory
+
+
+#  - name: Write out message
+#    debug:
+#      msg: "This is a test"
+
+  - name: OS ->
+    debug: 
+      msg: "OS is {{ansible_distribution}}"
+
+  - name: OS -> Major version
+    debug:
+      msg: "Major version is {{ansible_distribution_major_version}}" 
+
+  - name: OS -> Version
+    debug:
+      msg: "Version is {{ansible_distribution_version}}"
+
+  - name: Testing
+    debug: 
+      msg: "{{ansible_os_family}}"
+
+  - name: Inventory hostname
+    debug:
+      msg="Name in inventory is {{inventory_hostname}}"
+
+  - name: Apache Only
+    when: ansible_distribution == ''
+

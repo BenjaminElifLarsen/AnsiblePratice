@@ -1,0 +1,25 @@
+---
+- name: Service Testing
+  hosts: docker
+  become: yes
+  become_user: root
+  become_method: sudo
+#  gather_facts: no
+  tasks:
+
+#  - name: Stop
+#    ansible.builtin.service:
+#      name: sqlserv
+#      state: stopped
+
+  - name: Install
+    yum:
+      user_backend: yum
+      name: httpd
+      state: latest
+    when: ansible_distribution == 'Debian'
+
+#  - name: Start httpd
+#    service: 
+#      name=httpd 
+#      state=started

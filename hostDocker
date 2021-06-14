@@ -1,10 +1,4 @@
 all:
-  hosts:
-    mssql:
-    apache:
-      docker_host: "tcp://0.0.0.0:8081"  
-  vars:
-    ansible_connection: docker
 
 local:
   hosts:
@@ -12,3 +6,12 @@ local:
   vars:
     ansible_connection: local
 
+docker:
+  hosts:
+    apache:
+      docker_host: "tcp://0.0.0.0:8081"
+    apacheprivileged:
+    mssql:
+    mssqlprivileged:
+  vars:
+    ansible_connection: docker
