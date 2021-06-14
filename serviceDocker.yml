@@ -12,14 +12,24 @@
 #      name: sqlserv
 #      state: stopped
 
-  - name: Install
-    yum:
-      user_backend: yum
-      name: httpd
+  - name: Install Apache2
+    apt:
+      name: apache2
       state: latest
     when: ansible_distribution == 'Debian'
+
+  - name: Update all
+    apt:
+      name: "*"
+      state: latest
 
 #  - name: Start httpd
 #    service: 
 #      name=httpd 
 #      state=started
+
+  - name: Restart Apache2
+    ansible.builtin.service:
+      name: apache2
+      state: restarted
+    ignore_errors: yes

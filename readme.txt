@@ -14,3 +14,5 @@ The name of the host needs to be same as the docker container.
 Debian does not support LSB, however, instead of failing it just returns an empty array. 
 
 Stopping a container will make it unreachable as expected. 
+
+The following command, ansible localhost -m setup -a "filter=ansible_pkg_mgr", can be used to figure out if the playbook needs to use yum or apt to work with packages.
